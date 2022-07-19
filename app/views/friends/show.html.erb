@@ -1,0 +1,26 @@
+
+<div class="card" style="width: 18rem;">
+<%= image_tag("Lot-32", :alt => "rss feed", :width =>"300px", :class => "card-img-top") %>
+  <%# <img src="./Lot-32" class="card-img-top" alt="..."> %>
+  <div class="card-body">
+    <h5 class="card-title"><%= @friend.first_name%> <%= @friend.last_name%></h5>  
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><%= @friend.email%></li>
+    <li class="list-group-item"><%= @friend.phone%></li>
+    <li class="list-group-item"><%= @friend.facebook%></li>
+  </ul>
+  <br/>
+
+  <div class="d-flex justify-content-evenly mt-2 mb-2">
+  <%= link_to "Edit", edit_friend_path(@friend), class:"btn btn-secondary" %>
+  <%= link_to "Back", friends_path, class:"btn btn-secondary" %>
+</div class="d-flex justify-content>
+  <%= button_to "Remove", @friend, method: :destroy %>
+
+
+
+
+
+
+<%# editing above this  %>
